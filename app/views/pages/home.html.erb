@@ -1,2 +1,35 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container" data-form-target="container" data-action="click->form#hidePopup">
+  <div class="blue-container">
+    <div class="deco"></div>
+    <div class="logo">
+      <%= image_tag "logo", class: "logo" %>
+    </div>
+    <div class="content">
+      <h1 class="title">
+        Vous facilite l'organisation de matchs au city-stade&nbsp;!
+      </h1>
+      <p class="desc">
+        C'est la garantie de venir pour jouer...
+        Avec tes potes, vous pourrez affronter d'autres équipes.
+        Vos scores resteront gravés sur les terrains proches de chez vous.
+      </p>
+    </div>
+    <div class="registants">
+      <h2 class="count" data-form-target="counter"><%= @registrants_count %> </h2>
+      <h3 class="text">Déjà inscrits</h3>
+    </div>
+  </div>
+  <div class="white-container">
+    <div id="ball-laptop">
+    </div>
+    <p class="desc">Inscris-toi pour rester informé(e), <br>
+      Compet' en Vill' sort bientôt !</p>
+    <%= form_with model: @registrant, class: "form", data: { action: "submit->form#displayPopup" } do |form| %>
+      <div id="email-div">
+        <%= form.label :email, "E-mail", id: "email-label", data: { form_target: "label" } %>
+        <%= form.text_field :email, id: "email-input", data: { form_target: "input", action: "focusin->form#focusIn focusout->form#focusOut" } %>
+      </div>
+      <%= form.submit "Rejoingnez-nous", id: "submit" %>
+    <% end %>
+  </div>
+</div>

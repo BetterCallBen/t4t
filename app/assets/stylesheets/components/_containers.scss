@@ -1,0 +1,303 @@
+.container {
+  height: 100vh;
+  transition: filter 0.2s;
+  position: relative;
+  overflow: hidden;
+  &.blur {
+    filter: blur(5px);
+  }
+  #ball {
+    position: absolute;
+    right: -23px;
+    top: calc(71vh - 50px);
+    width: 100px;
+    z-index: 10000;
+  }
+  .blue-container {
+    position: relative;
+    overflow: hidden;
+    background-color: $blue;
+    box-sizing: border-box;
+    color: white;
+    height: 71vh;
+    padding: 2rem 1.5rem;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1vh;
+    @media (max-height: 700px) {
+      padding: 1rem 2rem;
+      padding-top: 2rem;
+    }
+    @media (min-width: 720px) {
+      padding: 3rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      width: 17em;
+      margin: 0 auto;
+      @media (max-height: 700px) {
+        width: 14em;
+      }
+      @media (min-width: 720px) {
+        width: 20em;
+      }
+      .logo-img {
+        width: 100%;
+      }
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      .title {
+        z-index: 2;
+        font-size: 1.4rem;
+      }
+      .desc {
+        z-index: 2;
+        font-size: 1rem;
+        color: rgb(224, 224, 224);
+      }
+      @media (max-height: 700px) {
+        .title {
+          font-size: 1.2rem;
+        }
+
+        .desc {
+          font-size: 0.8rem;
+        }
+      }
+      @media (min-width: 720px) {
+        .title {
+          font-size: 1.6rem;
+        }
+        .desc {
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .registants {
+      display: flex;
+      flex-direction: column;
+      z-index: 2;
+      .count {
+        font-size: 3.6rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+
+      .text {
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+      @media (max-height: 700px) {
+        .count {
+          font-size: 3rem;
+        }
+
+        .text {
+          font-size: 2.4rem;
+        }
+      }
+      @media (min-width: 720px) {
+        .count {
+          font-size: 3.2rem;
+        }
+        .text {
+          font-size: 3.2rem;
+        }
+      }
+    }
+    .deco {
+      height: 50vh;
+      width: 200vw;
+      background-color: $dark-blue;
+      position: absolute;
+      bottom: -34vh;
+      left: -50vw;
+      transform: rotate(-16deg);
+    }
+    @media (max-height: 700px) {
+      .deco {
+        bottom: -32vh;
+        transform: rotate(-14deg);
+      }
+    }
+    @media (min-width: 720px) {
+      .deco {
+        bottom: -30vh;
+        transform: rotate(-15deg);
+      }
+    }
+  }
+  .white-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    height: 29vh;
+    width: 100vw;
+    box-sizing: border-box;
+    background-color: white;
+    @media (max-width: 1024px) {
+      #ball-laptop {
+        display: none;
+      }
+    }
+    .desc {
+      color: rgba(0, 0, 0, 0.895);
+    }
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      padding-bottom: 1rem;
+      #email-div {
+        position: relative;
+        height: 40px;
+        display: flex;
+        #email-label {
+          padding: 1.5px;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $blue;
+          background-color: white;
+          position: absolute;
+          top: 8px;
+          left: 11px;
+          transition: 0.2s;
+          font-family: "Switzer";
+          &.active {
+            top: -10px;
+            left: 11px;
+            font-size: 0.8rem;
+            z-index: 4;
+          }
+        }
+        #email-input {
+          border-radius: 3px;
+          padding: 10px;
+          font-size: 1rem;
+          margin: 0;
+          border: none;
+          background-color: transparent;
+          z-index: 2;
+          width: 100%;
+          border: 1px solid $blue;
+          &:focus {
+            outline: none;
+            border: 1.5px solid $blue;
+          }
+          &:focus-visible {
+            outline: none;
+          }
+        }
+      }
+      #submit {
+        background-color: $blue;
+        color: white;
+        border-radius: 3px;
+        font-weight: 700;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 60px white inset !important;
+  background-color: white !important;
+  background-clip: content-box !important;
+}
+
+// for laptop
+
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    padding: 0 4em;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    gap: 2vw;
+    #ball {
+      display: none;
+    }
+    .blue-container {
+      justify-content: center;
+      gap: 13vh;
+      padding: 0;
+      height: 100%;
+      overflow: visible;
+      .deco {
+        position: fixed;
+        height: 70vh;
+        bottom: -30vh;
+        transform: rotate(-13deg);
+      }
+      .logo {
+        width: 21em;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+
+        .title {
+          font-size: 2rem;
+        }
+
+        .desc {
+          font-size: 1.2rem;
+        }
+      }
+      .registants {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: baseline;
+        .count {
+          font-size: 5rem;
+        }
+        .text {
+          font-size: 4rem;
+        }
+      }
+    }
+    .white-container {
+      width: 57vw;
+      height: 50vh;
+      position: relative;
+      padding: 3rem;
+      border-radius: 9px;
+      box-sizing: border-box;
+      margin: auto 0;
+      gap: 1.5rem;
+      #ball-laptop {
+        position: absolute;
+        top: -30px;
+        right: -15px;
+        width: 100px;
+      }
+      .desc {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
