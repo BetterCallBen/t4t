@@ -6,30 +6,29 @@
     </div>
     <div class="content">
       <h1 class="title">
-        Vous facilite l'organisation de matchs au city-stade&nbsp;!
+        Tennis 4 Tomorrow&nbsp;
       </h1>
       <p class="desc">
-        C'est la garantie de venir pour jouer...
-        Avec tes potes, vous pourrez affronter d'autres équipes.
-        Vos scores resteront gravés sur les terrains proches de chez vous.
+        Tennis 4 Tomorrow : La Marque des Jeunes qui font le Tennis de Demain, Avec les 1ères raquettes Eco-frienly Stylées
       </p>
     </div>
     <div class="registants">
       <h2 class="count" data-form-target="counter"><%= @registrants_count %> </h2>
-      <h3 class="text">Déjà inscrits</h3>
+      <h3 class="text">inscrits</h3>
     </div>
   </div>
   <div class="white-container">
     <div id="ball-laptop">
     </div>
-    <p class="desc">Inscris-toi pour rester informé(e), <br>
-      Compet' en Vill' sort bientôt !</p>
+    <p class="desc">Le Tennis : 4ème sport le plus polluant au monde !<br>
+      Si comme nous, vous souhaitez jouer au tennis sans impacter la planète..<br>
+      Mettez du vert dans votre jeu</p>
     <%= form_with model: @registrant, class: "form", data: { action: "submit->form#displayPopup" } do |form| %>
       <div id="email-div">
         <%= form.label :email, "E-mail", id: "email-label", data: { form_target: "label" } %>
         <%= form.text_field :email, id: "email-input", data: { form_target: "input", action: "focusin->form#focusIn focusout->form#focusOut" } %>
       </div>
-      <%= form.submit "Rejoingnez-nous", id: "submit" %>
+      <%= form.submit "Suivez-nous!", id: "submit" %>
     <% end %>
   </div>
 </div>

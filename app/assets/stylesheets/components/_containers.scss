@@ -54,16 +54,18 @@
     .content {
       display: flex;
       flex-direction: column;
-      row-gap: 12px;
+      row-gap: 1px;
 
       .title {
         z-index: 2;
         font-size: 1.4rem;
+        margin-top: 0.5rem;
       }
       .desc {
         z-index: 2;
         font-size: 1rem;
         color: rgb(224, 224, 224);
+        margin-top: 0.5rem;
       }
       @media (max-height: 700px) {
         .title {
@@ -91,12 +93,14 @@
         font-size: 3.6rem;
         font-weight: 700;
         line-height: 1;
+        color: rgb(255, 255, 255);
       }
 
       .text {
         font-size: 2.8rem;
         font-weight: 400;
         line-height: 1;
+        color: rgb(255, 255, 255);
       }
       @media (max-height: 700px) {
         .count {
@@ -119,11 +123,12 @@
     .deco {
       height: 50vh;
       width: 200vw;
-      background-color: $dark-blue;
+      // background-color: $dark-blue;
+      background-image: $white-container-image;
       position: absolute;
       bottom: -34vh;
       left: -50vw;
-      transform: rotate(-16deg);
+      transform: rotate(0deg);
     }
     @media (max-height: 700px) {
       .deco {
@@ -169,8 +174,8 @@
           padding: 1.5px;
           font-size: 1rem;
           font-weight: 400;
-          color: $blue;
-          background-color: white;
+          color: $dark-blue;
+          background-color: rgb(255, 255, 255);
           position: absolute;
           top: 8px;
           left: 11px;
@@ -192,10 +197,10 @@
           background-color: transparent;
           z-index: 2;
           width: 100%;
-          border: 1px solid $blue;
+          border: 1px solid $dark-blue;
           &:focus {
             outline: none;
-            border: 1.5px solid $blue;
+            border: 1.5px solid $dark-blue;
           }
           &:focus-visible {
             outline: none;
@@ -203,8 +208,8 @@
         }
       }
       #submit {
-        background-color: $blue;
-        color: white;
+        background-color: $dark-blue;
+        color: rgb(255, 255, 255);
         border-radius: 3px;
         font-weight: 700;
         font-size: 1rem;
@@ -244,13 +249,16 @@ input:-webkit-autofill:active {
       justify-content: center;
       gap: 13vh;
       padding: 0;
+      padding-bottom: 8rem;
       height: 100%;
       overflow: visible;
       .deco {
         position: fixed;
         height: 70vh;
-        bottom: -30vh;
-        transform: rotate(-13deg);
+        bottom: -35vh;
+        left: -1vh;
+        // background-size: cover;
+        transform: rotate(0deg);
       }
       .logo {
         width: 21em;
@@ -262,10 +270,12 @@ input:-webkit-autofill:active {
 
         .title {
           font-size: 2rem;
+          color: black;
         }
 
         .desc {
           font-size: 1.2rem;
+          color: black;
         }
       }
       .registants {
@@ -281,8 +291,10 @@ input:-webkit-autofill:active {
       }
     }
     .white-container {
-      width: 57vw;
-      height: 50vh;
+      // background-image: $white-container-image;
+      border: 2px solid black;
+      width: 35vw;
+      height: 32vh;
       position: relative;
       padding: 3rem;
       border-radius: 9px;
@@ -290,8 +302,9 @@ input:-webkit-autofill:active {
       margin: auto 0;
       gap: 1.5rem;
       #ball-laptop {
+
         position: absolute;
-        top: -30px;
+        top: -25px;
         right: -15px;
         width: 100px;
       }
