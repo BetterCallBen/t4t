@@ -18,7 +18,7 @@
     overflow: hidden;
     background-color: $blue;
     box-sizing: border-box;
-    color: white;
+    color:$dark-green;
     height: 71vh;
     padding: 2rem 1.5rem;
     padding-top: 4rem;
@@ -54,18 +54,16 @@
     .content {
       display: flex;
       flex-direction: column;
-      row-gap: 1px;
+      row-gap: 12px ;
 
       .title {
         z-index: 2;
         font-size: 1.4rem;
-        margin-top: 0.5rem;
       }
       .desc {
         z-index: 2;
         font-size: 1rem;
-        color: rgb(224, 224, 224);
-        margin-top: 0.5rem;
+        color: $dark-green;
       }
       @media (max-height: 700px) {
         .title {
@@ -84,6 +82,7 @@
           font-size: 1.1rem;
         }
       }
+
     }
     .registants {
       display: flex;
@@ -93,14 +92,12 @@
         font-size: 3.6rem;
         font-weight: 700;
         line-height: 1;
-        color: rgb(255, 255, 255);
       }
 
       .text {
         font-size: 2.8rem;
         font-weight: 400;
         line-height: 1;
-        color: rgb(255, 255, 255);
       }
       @media (max-height: 700px) {
         .count {
@@ -123,14 +120,14 @@
     .deco {
       height: 50vh;
       width: 200vw;
-      // background-color: $dark-blue;
-      background-image: $white-container-image;
+      background-color: $dark-blue;
       position: absolute;
+      border: 16px solid #ffffff;
       bottom: -34vh;
       left: -50vw;
-      transform: rotate(0deg);
+      transform: rotate(-16deg);
     }
-    @media (max-height: 700px) {
+    @media (max-height: 700px)  {
       .deco {
         bottom: -32vh;
         transform: rotate(-14deg);
@@ -159,7 +156,8 @@
       }
     }
     .desc {
-      color: rgba(0, 0, 0, 0.895);
+      color: $dark-green;
+
     }
     .form {
       display: flex;
@@ -174,8 +172,8 @@
           padding: 1.5px;
           font-size: 1rem;
           font-weight: 400;
-          color: $dark-blue;
-          background-color: rgb(255, 255, 255);
+          color: $dark-green;
+          background-color: white;
           position: absolute;
           top: 8px;
           left: 11px;
@@ -197,10 +195,10 @@
           background-color: transparent;
           z-index: 2;
           width: 100%;
-          border: 1px solid $dark-blue;
+          border: 1px solid $blue;
           &:focus {
             outline: none;
-            border: 1.5px solid $dark-blue;
+            border: 1.5px solid $blue;
           }
           &:focus-visible {
             outline: none;
@@ -209,8 +207,8 @@
       }
       #submit {
         background-color: $dark-blue;
-        color: rgb(255, 255, 255);
-        border-radius: 3px;
+        color: $dark-green;
+        // border-radius: 3px;
         font-weight: 700;
         font-size: 1rem;
         display: flex;
@@ -220,6 +218,7 @@
         cursor: pointer;
       }
     }
+
   }
 }
 
@@ -249,16 +248,13 @@ input:-webkit-autofill:active {
       justify-content: center;
       gap: 13vh;
       padding: 0;
-      padding-bottom: 8rem;
       height: 100%;
       overflow: visible;
       .deco {
         position: fixed;
         height: 70vh;
-        bottom: -35vh;
-        left: -1vh;
-        // background-size: cover;
-        transform: rotate(0deg);
+        bottom: -30vh;
+        transform: rotate(-13deg);
       }
       .logo {
         width: 21em;
@@ -270,12 +266,11 @@ input:-webkit-autofill:active {
 
         .title {
           font-size: 2rem;
-          color: black;
+
         }
 
         .desc {
           font-size: 1.2rem;
-          color: black;
         }
       }
       .registants {
@@ -291,10 +286,8 @@ input:-webkit-autofill:active {
       }
     }
     .white-container {
-      // background-image: $white-container-image;
-      border: 2px solid black;
-      width: 35vw;
-      height: 32vh;
+      width: 57vw;
+      height: 50vh;
       position: relative;
       padding: 3rem;
       border-radius: 9px;
@@ -302,15 +295,16 @@ input:-webkit-autofill:active {
       margin: auto 0;
       gap: 1.5rem;
       #ball-laptop {
-
         position: absolute;
-        top: -25px;
+        top: -30px;
         right: -15px;
         width: 100px;
+
       }
       .desc {
         font-size: 1.4rem;
       }
     }
   }
+
 }

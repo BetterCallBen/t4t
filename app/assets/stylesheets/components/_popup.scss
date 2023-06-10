@@ -6,7 +6,7 @@
   background-color: white;
   border-radius: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.282);
-  color: black;
+  color: $dark-green;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -27,8 +27,8 @@
   }
   .btn {
     padding: 12px 24px;
-    background-color: $blue;
-    color: white;
+    background-color: $dark-blue;
+    color: $dark-green;
     border-radius: 3px;
     font-weight: 700;
     display: flex;
@@ -50,6 +50,7 @@
       font-size: 1.4rem;
     }
   }
+
 }
 
 @keyframes popup-pop-in {
@@ -67,4 +68,5 @@
     transform: scale(1) translate(-50%, -50%);
     opacity: 1;
   }
+
 }
