@@ -18,11 +18,10 @@
     </div>
   </div>
   <div class="white-container">
-    <div id="ball-laptop">
-    </div>
     <p class="desc">Le Tennis : 4ème sport le plus polluant au monde !<br>
       Si comme nous, vous souhaitez jouer au tennis sans impacter la planète..<br>
-      Mettez du vert dans votre jeu</p>
+      Mettez du vert dans votre jeu
+    </p>
     <%= form_with model: @registrant, class: "form", data: { action: "submit->form#displayPopup" } do |form| %>
       <div id="email-div">
         <%= form.label :email, "E-mail", id: "email-label", data: { form_target: "label" } %>
