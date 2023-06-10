@@ -120,7 +120,7 @@
       }
     }
     .deco {
-      height: 50vh;
+      height: 40vh;
       width: 200vw;
       background-color: $dark-blue;
       position: absolute;
@@ -131,7 +131,7 @@
     }
     @media (max-height: 700px)  {
       .deco {
-        bottom: -32vh;
+        bottom: -44vh;
         transform: rotate(-14deg);
       }
     }
@@ -148,7 +148,7 @@
     justify-content: center;
     gap: 1rem;
     padding: 1.5rem;
-    height: 29vh;
+    height: 32vh;
     width: 100vw;
     box-sizing: border-box;
     background-color: white;
@@ -255,7 +255,7 @@ input:-webkit-autofill:active {
       overflow: visible;
       .deco {
         position: fixed;
-        height: 70vh;
+        height: 40vh;
         bottom: -30vh;
         transform: rotate(-13deg);
       }
