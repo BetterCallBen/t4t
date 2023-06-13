@@ -272,8 +272,8 @@ input:-webkit-autofill:active {
     }
     .blue-container {
       justify-content: center;
-      gap: 18vh;
-      padding: 0;
+      gap: 12vh !important;
+      padding: 1rem 1.5rem;
       height: 100%;
       overflow: visible;
       .deco {
