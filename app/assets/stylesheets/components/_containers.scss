@@ -18,8 +18,9 @@
     z-index: 1;
     @media (max-height: 700px) {
       height: 22%;
+      background-size: cover;
     }
-    }
+  }
   #ball {
     position: absolute;
     right: -23px;
@@ -333,9 +334,4 @@ input:-webkit-autofill:active {
     }
   }
 
-}
-@media (min-width: 1440px) {
-  .logo {
-    width: 21em;
-  }
 }
