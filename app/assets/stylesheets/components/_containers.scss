@@ -6,6 +6,19 @@
   &.blur {
     filter: blur(5px);
   }
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 22%;
+    background-image: $white-container-image;
+    background-size: contain;
+    z-index: 1;
+    @media (max-height: 700px) {
+      height: 22%;
+    }
+    }
   #ball {
     position: absolute;
     right: -23px;
@@ -21,31 +34,34 @@
     color:$dark-green;
     height: 71vh;
     padding: 2rem 1.5rem;
-    padding-top: 4rem;
+    padding-top: 8rem;
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
     gap: 1vh;
     @media (max-height: 700px) {
       padding: 1rem 2rem;
-      padding-top: 2rem;
+      padding-top: 6rem;
     }
     @media (min-width: 720px) {
       padding: 3rem;
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #e1e0d9;
+      border-radius: 50%;
+      // align-items: center;
+      justify-content: left;
       z-index: 2;
-      width: 17em;
-      margin: 0 auto;
+      width: 8em;
+
+      float: left;
       @media (max-height: 700px) {
-        width: 14em;
+        width: 7em;
       }
       @media (min-width: 720px) {
-        width: 20em;
+        width: 8em;
       }
       .logo-img {
         width: 100%;
@@ -88,15 +104,19 @@
     }
     .registants {
       display: flex;
-      flex-direction: column;
+      display: inline-block;
+      // flex-direction: column;
+      word-spacing: 5px;
       z-index: 2;
       .count {
+        display: inline-block;
         font-size: 3.6rem;
         font-weight: 700;
         line-height: 1;
       }
 
       .text {
+        display: inline-block;
         font-size: 2.8rem;
         font-weight: 400;
         line-height: 1;
@@ -247,9 +267,12 @@ input:-webkit-autofill:active {
     #ball {
       display: none;
     }
+    .bg {
+      background: contain;
+    }
     .blue-container {
       justify-content: center;
-      gap: 13vh;
+      gap: 18vh;
       padding: 0;
       height: 100%;
       overflow: visible;
@@ -260,7 +283,7 @@ input:-webkit-autofill:active {
         transform: rotate(-13deg);
       }
       .logo {
-        width: 21em;
+        width: 12em;
       }
       .content {
         display: flex;
@@ -309,4 +332,9 @@ input:-webkit-autofill:active {
     }
   }
 
+}
+@media (min-width: 1440px) {
+  .logo {
+    width: 21em;
+  }
 }
