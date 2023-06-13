@@ -14,6 +14,7 @@
     height: 22%;
     background-image: $white-container-image;
     background-size: contain;
+    background-image: cover;
     z-index: 1;
     @media (max-height: 700px) {
       height: 22%;
